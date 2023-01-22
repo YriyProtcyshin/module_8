@@ -2,9 +2,11 @@ import { Navigation } from 'components/Navigation/Navigation';
 import css from './AppBar.module.css';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 import { AuthNav } from 'components/AuthNav/AuthNav';
+import { useSelector } from 'react-redux';
 
 export const AppBar = () => {
-  const isLoggedIn = false;
+  const isLoggedIn = useSelector(state => state.isLoggedIn);
+  console.log(isLoggedIn)
   return (
     <header className={css.header}>
       <Navigation />

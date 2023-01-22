@@ -15,7 +15,7 @@ export const RegisterForm = () => {
     console.log(name);
     dispatch(registerUser({ name: name, email: email, password: password }));
   };
-
+ 
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
